@@ -1,0 +1,21 @@
+.modal {
+    background-color: var(--white);
+    position: fixed;
+    color: var(--oxford);
+    width: 95%;
+    height: 90%;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: var(--oxford) 0.25rem solid;
+    display: none;
+    transition: transform 0.3s ease, left 0.3s ease;
+}
+
+#modal-close {
+    position: absolute;
+    right: 0.75%;
+    top: 1.5%;
+    cursor: pointer;
+}
