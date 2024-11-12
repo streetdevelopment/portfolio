@@ -21,8 +21,8 @@
             <li class="nav-btn" target="about">About</li>
             <li class="nav-btn" target="services">Services</li>
             <li class="nav-btn" target="projects">Projects</li>
-            <li class="nav-btn" target="contact">Contact</li>
-            <li class="nav-btn" target="blog">Blog</li>
+            <li class="nav-btn" target="contacts">Contact</li>
+            <li class="nav-btn" target="blogs">Blog</li>
         </ul>
     </header>
 
@@ -46,12 +46,16 @@
 
     <!-- Modals -->
 
-    <div class="modal" id="modal">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-square-fill"
-            id="modal-close" viewBox="0 0 16 16">
+    <div id="modal" class="modal">
+
+        <svg xmlns="http://www.w3.org/2000/svg" id="modal-close" width="24" height="24" fill="#0B132B"
+            class="bi bi-x-circle-fill" viewBox="0 0 16 16">
             <path
-                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708" />
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
         </svg>
+
+        <div id="modal-content-container"></div>
+
     </div>
 
     <!-- End of Modals -->
@@ -60,7 +64,7 @@
 
     </footer>
 
-    <script src="assets/js/svg.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

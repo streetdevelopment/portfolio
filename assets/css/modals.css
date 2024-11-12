@@ -1,21 +1,160 @@
 .modal {
     background-color: var(--white);
     position: fixed;
-    color: var(--oxford);
-    width: 95%;
-    height: 90%;
     top: 50%;
-    left: -50%;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 90%;
+    height: 95%;
+    transform: translate(-170%, -50%);
     border-radius: 5px;
-    border: var(--oxford) 0.25rem solid;
+    border: 5px var(--oxford) solid;
     display: none;
-    transition: transform 0.3s ease, left 0.3s ease;
+    transition: 150ms ease-in-out;
 }
 
-#modal-close {
+.modal #modal-close {
     position: absolute;
-    right: 0.75%;
     top: 1.5%;
+    right: 1%;
     cursor: pointer;
+    z-index: 5;
+    fill: var(--white);
+}
+
+#modal-content-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+#modal-content-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal .hero {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: var(--oxford);
+}
+
+.modal .hero img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 72.5%;
+    transition: 100ms ease-out;
+}
+
+.modal .hero img:hover {
+    transform: translate(-50%, -1.25%) scale(1.025);
+}
+
+.modal .hero h2 {
+    font-family: 'poppins-regular';
+    margin: 0;
+    font-size: 5rem;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    color: var(--white);
+}
+
+.modal section {
+    height: fit-content;
+    padding: 5rem 10rem 4.5rem;
+}
+
+.modal section p {
+    margin: 0;
+    font-family: 'poppins-regular';
+    font-size: 1.25rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.modal section .h1 {
+    font-family: 'poppins-bold';
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.modal .half-hero {
+    height: 50%;
+    width: 100%;
+    background-color: var(--oxford);
+}
+
+.modal .half-hero h2 {
+    font-family: 'poppins-regular';
+    margin: 0;
+    font-size: 5rem;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    color: var(--white);
+}
+
+.modal .half-hero .services-grid {
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.modal .half-hero .services-grid .grid-item {
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px 1px var(--oxford);
+    border-radius: 5px;
+    transition: 150ms ease-in-out;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.modal .half-hero .services-grid .grid-item:hover {
+    box-shadow: 0px 0px 10px 5px var(--oxford);
+}
+
+.modal .half-hero .services-grid .grid-item .grid-item-banner {
+    height: 80%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+#web-dev {
+    background-image: url('/assets/images/web-dev.png');
+}
+
+#seo {
+    background-image: url('/assets/images/seo.png');
+}
+
+#e-tutor {
+    background-image: url('/assets/images/e-tutor.png');
+}
+
+.modal .half-hero .services-grid .grid-item .grid-item-text {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .half-hero .services-grid .grid-item .grid-item-text h3 {
+    font-family: 'poppins-regular';
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin: 0;
 }

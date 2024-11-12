@@ -1,13 +1,57 @@
 const closeBtn = document.getElementById('modal-close');
 const modal = document.getElementById('modal');
 const navBtns = Array.from(document.getElementsByClassName('nav-btn'));
+const modalContent = document.getElementById('modal-content-container')
 
-function showModal() {
+function showModal(code) {
     modal.style.display = 'block';
     setTimeout(() => {
         modal.style.left = '50%';
         modal.style.transform = 'translate(-50%, -50%)';
     }, 10);
+    switch (code) {
+        case 'about':
+            fetch('/modals/about.html')
+                .then(response => response.text())
+                .then(html => {
+                    modalContent.innerHTML = html;
+                    attachListeners(code)
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+            break;
+        case 'projects':
+            fetch('/modals/projects.html')
+                .then(response => response.text())
+                .then(html => {
+                    modalContent.innerHTML = html;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+            break;
+        case 'services':
+            fetch('/modals/services.html')
+                .then(response => response.text())
+                .then(html => {
+                    modalContent.innerHTML = html;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+            break;
+        case 'contacts':
+            fetch('/modals/contacts.html')
+                .then(response => response.text())
+                .then(html => {
+                    modalContent.innerHTML = html;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+            break;
+        case 'blogs':
+            fetch('/modals/blogs.html')
+                .then(response => response.text())
+                .then(html => {
+                    modalContent.innerHTML = html;
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+            break;
+    }
 }
 
 closeBtn.addEventListener('click', function () {
@@ -20,9 +64,28 @@ closeBtn.addEventListener('click', function () {
 
 navBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
-        showModal();
+        var code = btn.getAttribute('target')
+        showModal(code);
     });
 });
+
+// Modals
+
+function attachListeners(section) {
+    switch (section) {
+        case 'about':
+            const aboutHeroText = document.querySelector('#about-hero-text')
+            const aboutHeroImg = document.querySelector('#about-hero-image')
+            aboutHeroImg.addEventListener('mouseenter', function () {
+                aboutHeroText.innerText = "I'm Sam!"
+            })
+            aboutHeroImg.addEventListener('mouseleave', function () {
+                aboutHeroText.innerText = 'Hello World!'
+            })
+    }
+}
+
+// End of Modals
 
 const svgObject = document.getElementById('streetcity');
 svgObject.addEventListener('load', function () {
@@ -46,7 +109,7 @@ svgObject.addEventListener('load', function () {
         aboutLabel.style.visibility = 'hidden';
     });
     aboutLabel.addEventListener('click', function () {
-        showModal();
+        showModal('about');
     });
 
     const servicesSection = streetCity.getElementById('services-section-container');
@@ -68,7 +131,7 @@ svgObject.addEventListener('load', function () {
         servicesLabel.style.visibility = 'hidden';
     });
     servicesLabel.addEventListener('click', function () {
-        showModal();
+        showModal('services');
     });
 
     const projectsSection = streetCity.getElementById('projects-section-container');
@@ -90,7 +153,7 @@ svgObject.addEventListener('load', function () {
         projectsLabel.style.visibility = 'hidden';
     });
     projectsLabel.addEventListener('click', function () {
-        showModal();
+        showModal('projects');
     });
 
     const contactsSection = streetCity.getElementById('contacts-section-container');
@@ -112,7 +175,7 @@ svgObject.addEventListener('load', function () {
         contactsLabel.style.visibility = 'hidden';
     });
     contactsLabel.addEventListener('click', function () {
-        showModal();
+        showModal('contacts');
     });
 
     const blogsSection = streetCity.getElementById('blogs-section-container');
@@ -134,6 +197,6 @@ svgObject.addEventListener('load', function () {
         blogsLabel.style.visibility = 'hidden';
     });
     blogsLabel.addEventListener('click', function () {
-        showModal();
+        showModal('blogs');
     });
 });
