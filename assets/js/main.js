@@ -3,6 +3,21 @@ const modal = document.getElementById('modal');
 const navBtns = Array.from(document.getElementsByClassName('nav-btn'));
 const modalContent = document.getElementById('modal-content-container')
 
+function showProject(project_id) {
+    modal.style.left = '-50%';
+    modal.style.transform = 'translate(-50%, -50%)';
+    setTimeout(() => {
+        modal.style.display = 'none';
+        setTimeout(() => {
+            showModal('project_details', project_id)
+        }, 150)
+    }, 150);
+}
+
+function lightCloseBtn(state) {
+    state ? closeBtn.style.fill = '#f5f5f5' : closeBtn.style.fill = '#0B132B'
+}
+
 function showModal(code) {
     modal.style.display = 'block';
     setTimeout(() => {
@@ -10,6 +25,18 @@ function showModal(code) {
         modal.style.transform = 'translate(-50%, -50%)';
     }, 10);
     switch (code) {
+        case 'project_details':
+            fetch('/modals/project_details.html')
+                .then(response => response.text())
+                .then(html => {
+                    modalContent.innerHTML = html;
+                    lightCloseBtn(false)
+                    modalTop = modal.querySelector('#modal-top');
+                    modalTop.scrollIntoView({ behavior: 'smooth' });
+                    // attachListeners(code)
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+            break;
         case 'about':
             fetch('/modals/about.html')
                 .then(response => response.text())
@@ -24,6 +51,7 @@ function showModal(code) {
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
+                    attachListeners('projects')
                 })
                 .catch(error => console.error('Error loading HTML:', error));
             break;
@@ -59,6 +87,7 @@ closeBtn.addEventListener('click', function () {
     modal.style.transform = 'translate(-50%, -50%)';
     setTimeout(() => {
         modal.style.display = 'none';
+        lightCloseBtn(true)
     }, 300);
 });
 
@@ -82,6 +111,15 @@ function attachListeners(section) {
             aboutHeroImg.addEventListener('mouseleave', function () {
                 aboutHeroText.innerText = 'Hello World!'
             })
+            break;
+        case 'projects':
+            const viewProjectBtns = document.querySelectorAll('.view-project-btn');
+            viewProjectBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    showProject(btn.getAttribute('id'));
+                });
+            });
+            break;
     }
 }
 
