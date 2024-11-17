@@ -18,7 +18,7 @@ function lightCloseBtn(state) {
     state ? closeBtn.style.fill = '#f5f5f5' : closeBtn.style.fill = '#0B132B'
 }
 
-function showModal(code) {
+function showModal(code, project_id = null) {
     modal.style.display = 'block';
     setTimeout(() => {
         modal.style.left = '50%';
@@ -30,18 +30,35 @@ function showModal(code) {
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
-                    lightCloseBtn(false)
                     modalTop = modal.querySelector('#modal-top');
                     modalTop.scrollIntoView({ behavior: 'smooth' });
-                    // attachListeners(code)
+                    attachListeners(code)
                 })
                 .catch(error => console.error('Error loading HTML:', error));
+            setTimeout(() => {
+                const projectDetailsContainer = document.getElementById('section-group-container')
+
+                switch (project_id) {
+                    case 'webmina':
+                        fetch('/modals/project_details/webmina.html')
+                            .then(response => response.text())
+                            .then(html => {
+                                projectDetailsContainer.innerHTML = html;
+                                attachListeners(project_id)
+                                lightCloseBtn(false)
+                            })
+                            .catch(error => console.error('Error loading HTML:', error));
+                        break;
+                }
+            }, 500)
             break;
         case 'about':
             fetch('/modals/about.html')
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
+                    modalTop = modal.querySelector('.hero');
+                    modalTop.scrollIntoView({ behavior: 'smooth' });
                     attachListeners(code)
                 })
                 .catch(error => console.error('Error loading HTML:', error));
@@ -51,6 +68,8 @@ function showModal(code) {
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
+                    modalTop = modal.querySelector('.projects-hero');
+                    modalTop.scrollIntoView({ behavior: 'smooth' });
                     attachListeners('projects')
                 })
                 .catch(error => console.error('Error loading HTML:', error));
@@ -60,6 +79,8 @@ function showModal(code) {
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
+                    modalTop = modal.querySelector('.hero');
+                    modalTop.scrollIntoView({ behavior: 'smooth' });
                 })
                 .catch(error => console.error('Error loading HTML:', error));
             break;
@@ -119,6 +140,38 @@ function attachListeners(section) {
                     showProject(btn.getAttribute('id'));
                 });
             });
+            const scrollDownToSeeProjects = document.getElementById('scroll-down-to-see-projects')
+            scrollDownToSeeProjects.addEventListener('click', function () {
+                const modalProjectsGrid = document.querySelector('.projects-grid')
+                modalProjectsGrid.scrollIntoView({ behavior: 'smooth' })
+            })
+            break;
+        case 'webmina':
+            const featuresGrid = document.querySelectorAll('.feature-grid-item');
+            featuresGrid.forEach(function (el) {
+                el.addEventListener('click', function () {
+                    const isActive = el.getAttribute('status') === 'active';
+                    if (!isActive) {
+                        const otherElement = document.querySelector('.feature-grid-item[status="active"]');
+                        if (otherElement) {
+                            otherElement.classList.remove('active');
+                            otherElement.setAttribute('status', 'inactive');
+                        }
+                        el.classList.add('active');
+                        el.setAttribute('status', 'active');
+                    }
+                });
+            });
+            const backToTopBtn = document.getElementsByClassName('btp')[0]
+            const closeProjectsBtn = document.getElementsByClassName('cb')[0]
+            backToTopBtn.addEventListener('click', function () {
+                modalTop = modal.querySelector('#modal-top');
+                modalTop.scrollIntoView({ behavior: 'smooth' });
+            })
+            closeProjectsBtn.addEventListener('click', function () {
+                const clickEvent = new Event('click');
+                closeBtn.dispatchEvent(clickEvent);
+            })
             break;
     }
 }
