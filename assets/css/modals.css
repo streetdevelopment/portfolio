@@ -139,7 +139,7 @@
 }
 
 #web-dev {
-    background-image: url('/assets/images/web-dev.png');
+    background-image: url('.../assets/images/web-dev.png');
 }
 
 #seo {
