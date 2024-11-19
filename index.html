@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self';">
+        content="default-src 'self'; script-src 'self' 'nonce-mainjs'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+
 
     <title>Street Development</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/modals.css">
-    <link rel="stylesheet" href="assets/svg.css">
 
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+
+    <script nonce="mainjs" src="assets/js/main.js" defer></script>
+
+
 </head>
 
 <body>
@@ -70,7 +74,6 @@
 
     </footer>
 
-    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
