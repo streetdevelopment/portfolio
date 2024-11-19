@@ -16,17 +16,17 @@
 
 @font-face {
     font-family: "poppins-regular";
-    src: url('/assets/fonts/Poppins-Regular.ttf');
+    src: url('assets/fonts/Poppins-Regular.ttf');
 }
 
 @font-face {
     font-family: "poppins-bold";
-    src: url('/assets/fonts/Poppins-Bold.ttf');
+    src: url('assets/fonts/Poppins-Bold.ttf');
 }
 
 @font-face {
     font-family: "bd-sans";
-    src: url('/assets/fonts/BDSans-Regular.ttf');
+    src: url('assets/fonts/BDSans-Regular.ttf');
 }
 
 .poppins {
@@ -107,7 +107,7 @@ main .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/assets/images/hero_pattern.png');
+    background-image: url('assets/images/hero_pattern.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
