@@ -59,7 +59,7 @@
 }
 
 .modal .hero #about-hero-text {
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     margin: 0;
     font-size: 5rem;
     position: absolute;
@@ -76,14 +76,14 @@
 
 .modal section p {
     margin: 0;
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     font-size: 1.25rem;
     text-align: justify;
     margin-bottom: 1rem;
 }
 
 .modal section .h1 {
-    font-family: 'poppins-bold';
+    font-family: 'poppinsBold';
     font-size: 2.5rem;
     text-align: center;
 }
@@ -95,7 +95,7 @@
 }
 
 .modal .half-hero h2 {
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     margin: 0;
     font-size: 5rem;
     position: absolute;
@@ -159,7 +159,7 @@
 }
 
 .modal .half-hero .services-grid .grid-item .grid-item-text h3 {
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     font-size: 1.25rem;
     line-height: 1.25rem;
     margin: 0;
@@ -170,7 +170,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 2fr;
     background-color: var(--oxford);
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     color: var(--white);
     height: 100%;
     position: relative;
@@ -275,7 +275,7 @@
 .modal .projects-grid .project-grid-item .project-grid-item-header {
     display: flex;
     grid-template-columns: 1fr 1fr;
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     position: relative;
 }
 
@@ -323,7 +323,7 @@
 }
 
 .modal .hero-img {
-    font-family: 'poppins-bold';
+    font-family: 'poppinsBold';
     position: relative;
     width: 100%;
     height: 100%;
@@ -368,21 +368,21 @@
 }
 
 .section-group .stakeholders div h2 {
-    font-family: 'poppins-bold';
+    font-family: 'poppinsBold';
     margin: 0;
     font-size: 1rem;
     text-align: center;
 }
 
 .section-group .stakeholders div p {
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     margin: 0;
     font-size: 0.80rem;
     text-align: center;
 }
 
 .section-group .project-summary h2 {
-    font-family: 'poppins-bold';
+    font-family: 'poppinsBold';
     color: var(--oxford);
     font-size: 3rem;
     margin: 1rem 0;
@@ -391,7 +391,7 @@
 .section-group .project-summary p {
     margin: 0;
     font-size: 1rem;
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
 }
 
 .section-group .video-demo {
@@ -399,7 +399,7 @@
 }
 
 .section-group .video-demo h2 {
-    font-family: 'poppins-bold';
+    font-family: 'poppinsBold';
     color: var(--oxford);
     font-size: 3rem;
     margin: 0 0 1rem;
@@ -417,7 +417,7 @@
 .section-group .features h2,
 .section-group .tech h2,
 .section-group .screenshots h2 {
-    font-family: 'poppins-bold';
+    font-family: 'poppinsBold';
     color: var(--oxford);
     font-size: 3rem;
     margin: 0 0 1rem;
@@ -433,7 +433,7 @@
     background-color: var(--slate);
     border-radius: 2px;
     color: var(--white);
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     padding: 1.5rem 2rem;
     cursor: pointer;
     user-select: none;
@@ -503,12 +503,12 @@
 .section-group .tech .tech-grid .tech-group h3 {
     color: var(--oxford);
     font-size: 1.5rem;
-    font-family: 'poppins-bold';
+    font-family: 'poppinsBold';
     margin: 0;
 }
 
 .section-group .tech .tech-grid .tech-group .tool-grid {
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     display: flex;
     gap: 0.25rem;
 }
@@ -607,7 +607,7 @@
     padding: 0.25rem 0.5rem;
     border: none;
     color: var(--white);
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     border-radius: 5px;
     cursor: pointer;
     transition: 150ms ease-in-out;
