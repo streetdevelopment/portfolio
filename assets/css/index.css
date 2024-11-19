@@ -13,14 +13,6 @@
     box-sizing: border-box;
 }
 
-
-@font-face {
-    font-family: "poppinsRegular";
-    src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 @font-face {
     font-family: "poppinsBold";
     src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
@@ -36,13 +28,15 @@
 }
 
 .poppins {
-    font-family: 'poppinsRegular';
-    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .poppins-bold {
-    font-family: 'poppinsBold';
-    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .bd {
