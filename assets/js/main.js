@@ -40,7 +40,7 @@ function showModal(code, project_id = null) {
 
                 switch (project_id) {
                     case 'webmina':
-                        fetch('/modals/project_details/webmina.html')
+                        fetch('modals/project_details/webmina.html')
                             .then(response => response.text())
                             .then(html => {
                                 projectDetailsContainer.innerHTML = html;
