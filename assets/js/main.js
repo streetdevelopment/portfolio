@@ -26,7 +26,7 @@ function showModal(code, project_id = null) {
     }, 10);
     switch (code) {
         case 'project_details':
-            fetch('/modals/project_details.html')
+            fetch('modals/project_details.html')
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
@@ -64,7 +64,7 @@ function showModal(code, project_id = null) {
                 .catch(error => console.error('Error loading HTML:', error));
             break;
         case 'projects':
-            fetch('/modals/projects.html')
+            fetch('modals/projects.html')
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
@@ -75,7 +75,7 @@ function showModal(code, project_id = null) {
                 .catch(error => console.error('Error loading HTML:', error));
             break;
         case 'services':
-            fetch('/modals/services.html')
+            fetch('modals/services.html')
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
@@ -85,7 +85,7 @@ function showModal(code, project_id = null) {
                 .catch(error => console.error('Error loading HTML:', error));
             break;
         case 'contacts':
-            fetch('/modals/contacts.html')
+            fetch('modals/contacts.html')
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
@@ -93,7 +93,7 @@ function showModal(code, project_id = null) {
                 .catch(error => console.error('Error loading HTML:', error));
             break;
         case 'blogs':
-            fetch('/modals/blogs.html')
+            fetch('modals/blogs.html')
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
