@@ -143,11 +143,11 @@
 }
 
 #seo {
-    background-image: url('./images/seo.png');
+    background-image: url('./assets/images/seo.png');
 }
 
 #e-tutor {
-    background-image: url('../images/e-tutor.png');
+    background-image: url('../assets/images/e-tutor.png');
 }
 
 .modal .half-hero .services-grid .grid-item .grid-item-text {
