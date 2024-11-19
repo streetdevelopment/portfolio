@@ -53,7 +53,7 @@ function showModal(code, project_id = null) {
             }, 500)
             break;
         case 'about':
-            fetch('/modals/about.html')
+            fetch('modals/about.html')
                 .then(response => response.text())
                 .then(html => {
                     modalContent.innerHTML = html;
