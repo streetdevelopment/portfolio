@@ -15,32 +15,38 @@
 
 
 @font-face {
-    font-family: "poppins-regular";
-    src: url('/assets/fonts/Poppins-Regular.ttf');
+    font-family: "poppinsRegular";
+    src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "poppins-bold";
-    src: url('/assets/fonts/Poppins-Bold.ttf');
+    font-family: "poppinsBold";
+    src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "bd-sans";
-    src: url('/assets/fonts/BDSans-Regular.ttf');
+    font-family: "bdSans";
+    src: url('./assets/fonts/BDSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .poppins {
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     margin: 0;
 }
 
 .poppins-bold {
-    font-family: 'poppins-bold';
+    font-family: 'poppinsBold';
     margin: 0;
 }
 
 .bd {
-    font-family: 'bd-sans';
+    font-family: 'bdSans';
 }
 
 body {
@@ -64,7 +70,7 @@ header {
     align-items: center;
     padding: 0 4rem;
     height: 4rem;
-    font-family: 'poppins-regular';
+    font-family: 'poppinsRegular';
     width: 100%;
 }
 
