@@ -50,7 +50,7 @@ function showModal(code, project_id = null) {
                             .catch(error => console.error('Error loading HTML:', error));
                         break;
                 }
-            }, 500)
+            }, 750)
             break;
         case 'about':
             fetch('modals/about.html')
