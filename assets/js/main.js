@@ -37,12 +37,39 @@ function showModal(code, project_id = null) {
                 .catch(error => console.error('Error loading HTML:', error));
             setTimeout(() => {
                 const projectDetailsContainer = document.getElementById('section-group-container')
-
+                const projectDetailsBanner = document.getElementById('modal-top')
+                const projectDetailsTitle = document.getElementById('project-title')
                 switch (project_id) {
                     case 'webmina':
                         fetch('modals/project_details/webmina.html')
                             .then(response => response.text())
                             .then(html => {
+                                projectDetailsBanner.style.backgroundImage = "url(assets/images/webmina-banner.png)"
+                                projectDetailsTitle.innerText = "Web-based MSU-IIT Navigation Aid"
+                                projectDetailsContainer.innerHTML = html;
+                                attachListeners(project_id)
+                                lightCloseBtn(false)
+                            })
+                            .catch(error => console.error('Error loading HTML:', error));
+                        break;
+                    case 'hris':
+                        fetch('modals/project_details/hris.html')
+                            .then(response => response.text())
+                            .then(html => {
+                                projectDetailsBanner.style.backgroundImage = "url(assets/images/hris-banner.png)"
+                                projectDetailsTitle.innerText = "Human Resources Information System"
+                                projectDetailsContainer.innerHTML = html;
+                                attachListeners(project_id)
+                                lightCloseBtn(false)
+                            })
+                            .catch(error => console.error('Error loading HTML:', error));
+                        break;
+                    case 'mb':
+                        fetch('modals/project_details/mb.html')
+                            .then(response => response.text())
+                            .then(html => {
+                                projectDetailsBanner.style.backgroundImage = "url(assets/images/mb-banner.png)"
+                                projectDetailsTitle.innerText = "Merry Bright"
                                 projectDetailsContainer.innerHTML = html;
                                 attachListeners(project_id)
                                 lightCloseBtn(false)
@@ -50,7 +77,7 @@ function showModal(code, project_id = null) {
                             .catch(error => console.error('Error loading HTML:', error));
                         break;
                 }
-            }, 750)
+            }, 500)
             break;
         case 'about':
             fetch('modals/about.html')
