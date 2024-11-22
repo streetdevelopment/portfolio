@@ -665,6 +665,9 @@
 .modal-contacts .info-container {
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .modal-contacts .img-container img {
@@ -677,6 +680,17 @@
 
 .modal-contacts .info-container .info-group .icon-container {
     width: 20%;
+    display: flex;
+    justify-content: end;
+    padding: 0.5rem;
+}
+
+.modal-contacts .info-container .info-group .icon-container .contact-icon-gold {
+    fill: var(--gold);
+}
+
+.modal-contacts .info-container .info-group .icon-container .contact-icon-fire {
+    fill: var(--fire);
 }
 
 .modal-contacts .info-container .info-group .contact-container {
@@ -686,17 +700,21 @@
 }
 
 .modal-contacts .info-container .info-group .contact-container .contact-label {
+    padding: 0.15rem 0.75rem;
     width: 100%;
 }
 
 .modal-contacts .info-container .info-group .contact-container .contact-label h3 {
     margin: 0;
+    font-size: 1.5rem;
 }
 
 .modal-contacts .info-container .info-group .contact-container .contact-info {
     width: 100%;
+    padding: 0.15rem 0.75rem;
 }
 
 .modal-contacts .info-container .info-group .contact-container .contact-info p {
     margin: 0;
+    font-size: 1rem;
 }
