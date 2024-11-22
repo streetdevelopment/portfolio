@@ -64,30 +64,6 @@ function showModal(code, project_id = null) {
                             })
                             .catch(error => console.error('Error loading HTML:', error));
                         break;
-                    case 'mb':
-                        fetch('modals/project_details/mb.html')
-                            .then(response => response.text())
-                            .then(html => {
-                                projectDetailsBanner.style.backgroundImage = "url(assets/images/mb-banner.png)"
-                                projectDetailsTitle.innerText = "Merry Bright"
-                                projectDetailsContainer.innerHTML = html;
-                                attachListeners(project_id)
-                                lightCloseBtn(false)
-                            })
-                            .catch(error => console.error('Error loading HTML:', error));
-                        break;
-                    case 'pct':
-                        fetch('modals/project_details/pct.html')
-                            .then(response => response.text())
-                            .then(html => {
-                                projectDetailsBanner.style.backgroundImage = "url(assets/images/pct-banner.png)"
-                                projectDetailsTitle.innerText = "Pop Up Christmas Trees"
-                                projectDetailsContainer.innerHTML = html;
-                                attachListeners(project_id)
-                                lightCloseBtn(false)
-                            })
-                            .catch(error => console.error('Error loading HTML:', error));
-                        break;
                 }
             }, 500)
             break;
@@ -208,6 +184,33 @@ function attachListeners(section) {
                 modalTop.scrollIntoView({ behavior: 'smooth' });
             })
             closeProjectsBtn.addEventListener('click', function () {
+                const clickEvent = new Event('click');
+                closeBtn.dispatchEvent(clickEvent);
+            })
+            break;
+        case 'hris':
+            const featuresGridHris = document.querySelectorAll('.feature-grid-item');
+            featuresGridHris.forEach(function (el) {
+                el.addEventListener('click', function () {
+                    const isActive = el.getAttribute('status') === 'active';
+                    if (!isActive) {
+                        const otherElement = document.querySelector('.feature-grid-item[status="active"]');
+                        if (otherElement) {
+                            otherElement.classList.remove('active');
+                            otherElement.setAttribute('status', 'inactive');
+                        }
+                        el.classList.add('active');
+                        el.setAttribute('status', 'active');
+                    }
+                });
+            });
+            const backToTopBtnHris = document.getElementsByClassName('btp')[0]
+            const closeProjectsBtnHris = document.getElementsByClassName('cb')[0]
+            backToTopBtnHris.addEventListener('click', function () {
+                modalTop = modal.querySelector('#modal-top');
+                modalTop.scrollIntoView({ behavior: 'smooth' });
+            })
+            closeProjectsBtnHris.addEventListener('click', function () {
                 const clickEvent = new Event('click');
                 closeBtn.dispatchEvent(clickEvent);
             })

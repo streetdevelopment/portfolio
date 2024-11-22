@@ -614,3 +614,89 @@
         background-color: #e23a3a;
     }
 }
+
+.modal-blogs {
+    background-color: var(--oxford);
+    width: 100%;
+    height: 100%;
+}
+
+.modal-blogs h2 {
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.modal-contacts {
+    color: var(--white);
+    display: flex;
+    width: 100%;
+    background-color: var(--oxford);
+    height: 100%;
+    padding: 5rem;
+    position: relative;
+}
+
+.modal-contacts .left-star {
+    position: absolute;
+    bottom: 5%;
+    left: 2.5%;
+}
+
+.modal-contacts .right-star {
+    position: absolute;
+    top: 5%;
+    right: 2.5%;
+}
+
+.modal-contacts .img-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-contacts .img-container h2 {
+    margin: 0;
+    font-size: 5rem;
+}
+
+.modal-contacts .info-container {
+    width: 50%;
+    height: 100%;
+}
+
+.modal-contacts .img-container img {
+    width: 90%;
+}
+
+.modal-contacts .info-container .info-group {
+    display: flex;
+}
+
+.modal-contacts .info-container .info-group .icon-container {
+    width: 20%;
+}
+
+.modal-contacts .info-container .info-group .contact-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-contacts .info-container .info-group .contact-container .contact-label {
+    width: 100%;
+}
+
+.modal-contacts .info-container .info-group .contact-container .contact-label h3 {
+    margin: 0;
+}
+
+.modal-contacts .info-container .info-group .contact-container .contact-info {
+    width: 100%;
+}
+
+.modal-contacts .info-container .info-group .contact-container .contact-info p {
+    margin: 0;
+}
