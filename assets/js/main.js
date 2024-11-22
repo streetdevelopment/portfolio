@@ -76,6 +76,18 @@ function showModal(code, project_id = null) {
                             })
                             .catch(error => console.error('Error loading HTML:', error));
                         break;
+                    case 'pct':
+                        fetch('modals/project_details/pct.html')
+                            .then(response => response.text())
+                            .then(html => {
+                                projectDetailsBanner.style.backgroundImage = "url(assets/images/pct-banner.png)"
+                                projectDetailsTitle.innerText = "Pop Up Christmas Trees"
+                                projectDetailsContainer.innerHTML = html;
+                                attachListeners(project_id)
+                                lightCloseBtn(false)
+                            })
+                            .catch(error => console.error('Error loading HTML:', error));
+                        break;
                 }
             }, 500)
             break;
