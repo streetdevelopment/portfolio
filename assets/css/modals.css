@@ -767,6 +767,104 @@
     }
 }
 
+@media (max-width: 768px) {
+    .modal .hero-img .project-title-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-group .stakeholders {
+        display: grid;
+        grid-template-areas:
+            "a"
+            "b"
+            "c";
+        padding: 0.5rem 1.5rem;
+    }
+
+    .section-group .project-summary h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .section-group .project-summary p {
+        font-size: 0.80rem;
+    }
+
+    .section-group .video-demo {
+        padding: 0.5rem 2rem;
+    }
+
+    .section-group .video-demo h2 {
+        font-size: 1.5rem;
+        margin: 0 0 1rem;
+        text-align: center;
+    }
+
+    .section-group .video-demo iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    .section-group .features {
+        padding: 0.5rem 2rem;
+    }
+
+    .section-group .features h2,
+    .section-group .tech h2,
+    .section-group .screenshots h2 {
+        font-size: 1.5rem;
+        margin: 0 0 1rem;
+        text-align: center;
+    }
+
+    .section-group .features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 0.5rem;
+    }
+
+    .section-group .tech {
+        padding: 0.5rem 2rem;
+        width: 100%;
+    }
+
+    .section-group .tech .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .section-group .tech .tech-grid .tech-group {
+        background-color: #0B132B15;
+        padding: 1rem 1rem 1.5rem 1rem;
+        max-width: 100%;
+    }
+
+    .section-group .tech .tech-grid .tech-group h3 {
+        font-size: 1rem;
+    }
+
+    .section-group .tech .tech-grid .tech-group .tool-grid {
+        height: fit-content;
+        flex-wrap: wrap;
+    }
+
+    .section-group .tech .tech-grid .tech-group .tool-grid .tool-item {
+        font-size: 0.65rem;
+    }
+
+    .section-group .screenshots {
+        padding: 0.5rem 2rem;
+    }
+
+    .back-to-top {
+        justify-content: center;
+    }
+
+}
+
 .modal-blogs {
     background-color: var(--oxford);
     width: 100%;
