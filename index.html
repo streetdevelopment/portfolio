@@ -33,11 +33,11 @@
             <h1 class="poppins-regular">StreetDev</h1>
         </a>
         <ul>
-            <li class="nav-btn poppins-regular" target="about">About</li>
-            <li class="nav-btn poppins-regular" target="services">Services</li>
-            <li class="nav-btn poppins-regular" target="projects">Projects</li>
-            <li class="nav-btn poppins-regular" target="contacts">Contact</li>
-            <li class="nav-btn poppins-regular" target="blogs">Blog</li>
+            <li class="nav-btn poppins-regular" isProject="false" target="about">About</li>
+            <li class="nav-btn poppins-regular" isProject="false" target="services">Services</li>
+            <li class="nav-btn poppins-regular" isProject="false" target="projects">Projects</li>
+            <li class="nav-btn poppins-regular" isProject="false" target="contacts">Contact</li>
+            <li class="nav-btn poppins-regular" isProject="false" target="blogs">Blog</li>
         </ul>
     </header>
 
@@ -76,7 +76,32 @@
     <!-- End of Modals -->
 
     <footer>
-
+        <div class="footer-services">
+            <h2 class="nav-btn" isProject="false" target="services">Services</h2>
+            <ul>
+                <li class="nav-btn" isProject="false" target="services">Full Stack Web Development</li>
+                <li class="nav-btn" isProject="false" target="services">Search Engine Optimization</li>
+                <li class="nav-btn" isProject="false" target="services">Asynchronous/Live Tutoring</li>
+            </ul>
+        </div>
+        <div class="footer-projects">
+            <h2 class="nav-btn" isProject="false" target="projects">Projects</h2>
+            <ul>
+                <li class="nav-btn" isProject="true" target="project_details" projectId="webmina">WEB-MINA</li>
+                <li class="nav-btn" isProject="true" target="project_details" projectId="hris">HRIS</li>
+                <li class="nav-btn" isProject="false" target="projects">more</li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>streetdevbusiness@gmail.com</li>
+                <li>+63 910 973 3777</li>
+                <li>0031- B Sabayle St.</li>
+                <li>Poblacion, Iligan City 9200</li>
+                <li>Lanao Del Norte, Philippines</li>
+            </ul>
+        </div>
     </footer>
 
 </body>

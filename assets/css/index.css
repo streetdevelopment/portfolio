@@ -83,6 +83,8 @@ header {
     height: 4rem;
     font-family: 'poppinsRegular';
     width: 100%;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 header h1 {
@@ -104,6 +106,20 @@ header ul {
     margin: 0;
     display: flex;
     gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem 1rem;
+        gap: 0.5rem;
+        height: auto;
+    }
+
+    header ul {
+        gap: 1rem;
+        padding: 0;
+    }
 }
 
 header ul li {
@@ -155,6 +171,18 @@ main .hero h1 .second {
     transition: 150ms ease-in-out;
 }
 
+@media (max-width: 768px) {
+    main .hero h1 .first {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    main .hero h1 .second {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+}
+
 main .hero h1:hover .second {
     color: var(--gold);
     text-shadow: 0px 3px 0px var(--oxford);
@@ -178,10 +206,78 @@ section #streetcity {
     width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
+    z-index: -1;
 }
 
 footer {
     margin-top: -1%;
-    height: 10rem;
     background-color: var(--oxford);
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10rem;
+    width: 100%;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+footer div {
+    padding: 2rem 0;
+}
+
+footer div ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+footer div ul li {
+    margin: 0;
+    color: var(--white);
+    font-family: 'Poppins', 'Arial';
+    font-size: 0.80rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+
+    &:hover {
+        color: var(--gold);
+    }
+}
+
+footer h2 {
+    color: var(--white);
+    text-align: center;
+    font-family: 'Poppins';
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--white);
+    text-shadow: 0px 2px 0px var(--fire);
+    cursor: pointer;
+    transition: 150ms ease-in-out;
+}
+
+footer h2:hover {
+    color: var(--gold);
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        padding: 0 1rem;
+        height: auto;
+    }
+
+    footer div {
+        padding: 1.5rem 0;
+    }
+
+    footer h2 {
+        font-size: 1.25rem;
+    }
+
+    footer div ul li {
+        font-size: 0.75rem;
+    }
 }

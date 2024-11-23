@@ -85,6 +85,27 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .modal .hero #about-hero-text {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .modal section {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    .modal section p {
+        font-size: 0.90rem;
+    }
+
+    .modal section .h1 {
+        font-size: 1.10rem;
+        font-weight: 700;
+    }
+}
+
 .modal .half-hero {
     height: 50%;
     width: 100%;
@@ -158,6 +179,46 @@
     font-size: 1.25rem;
     line-height: 1.25rem;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .modal .half-hero {
+        height: 100%;
+    }
+
+    .modal .half-hero h2 {
+        font-size: 2rem;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+        z-index: 5;
+    }
+
+    .modal .half-hero .services-grid {
+        bottom: 40%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 3rem;
+        height: 80%;
+    }
+
+    .modal .half-hero .services-grid .grid-item {
+        padding: 0.25rem;
+    }
+
+    .modal .half-hero .services-grid .grid-item .grid-item-banner {
+        height: 80%;
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    .modal .half-hero .services-grid .grid-item .grid-item-text h3 {
+        font-size: 0.85rem;
+        line-height: 1rem;
+        text-align: center;
+    }
 }
 
 .modal .projects-hero {
@@ -303,6 +364,89 @@
 .modal .projects-grid .project-grid-item .project-grid-item-header a p {
     margin: 0 5px 0;
     font-size: 0.80rem;
+}
+
+@media (max-width: 768px) {
+    .modal .projects-hero .shape {
+        display: none;
+    }
+
+    .modal .projects-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+
+    .modal .projects-hero h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .modal .projects-hero .hero-body {
+        padding: 1rem 0;
+    }
+
+    .modal .projects-hero .hero-body p {
+        text-align: center;
+    }
+
+    .modal .projects-hero .mini-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+
+    .modal .projects-hero .scroll-down p {
+        text-align: center;
+        font-size: 0.70rem;
+    }
+
+    .modal .projects-hero .mini-grid .mini-grid-item h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .modal .projects-hero .mini-grid .mini-grid-item p {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .modal .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .modal .projects-grid .project-grid-item {
+        grid-template-rows: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .modal .projects-grid .project-grid-item .project-grid-item-header h2 {
+        font-size: 0.80rem;
+    }
+
+    .modal .projects-grid .project-grid-item .project-grid-item-header h3 {
+        font-size: 0.60rem;
+    }
+
+    .modal .projects-grid .project-grid-item .project-grid-item-header a {
+        top: 0%;
+        right: 0%;
+        transform: translate(0%, 0%);
+    }
+
+    .modal .projects-grid .project-grid-item .project-grid-item-header a p {
+        font-size: 0.60rem;
+    }
+
+    .height-fit-content {
+        height: fit-content;
+    }
 }
 
 .modal .projects-grid .project-grid-item .project-grid-item-body {
@@ -531,6 +675,14 @@
     }
 }
 
+.section-group .tech .tech-grid .tech-group .tool-grid .tool-item-success {
+    border: #198754 1px solid;
+
+    &:hover {
+        background-color: #19875425;
+    }
+}
+
 .section-group .screenshots {
     padding: 2.5rem 10rem 2rem;
     width: 100%;
@@ -717,4 +869,59 @@
 .modal-contacts .info-container .info-group .contact-container .contact-info p {
     margin: 0;
     font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .modal-contacts {
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    .modal-contacts .left-star,
+    .modal-contacts .right-star {
+        display: none;
+    }
+
+    .modal-contacts .img-container {
+        width: 100%;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .modal-contacts .img-container h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .modal-contacts .info-container {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .modal-contacts .info-container .info-group .icon-container {
+        padding: 0.25rem;
+    }
+
+    .modal-contacts .info-container .info-group .contact-container .contact-label {
+        padding: 0.5rem 0.5rem 0.05rem;
+    }
+
+    .modal-contacts .info-container .info-group .contact-container .contact-label h3 {
+        font-size: 1rem;
+    }
+
+    .modal-contacts .info-container .info-group .contact-container .contact-info {
+        padding: 0.05rem 0.5rem 0.05rem;
+    }
+
+    .modal-contacts .info-container .info-group .contact-container .contact-info p {
+        font-size: 0.75rem;
+    }
 }

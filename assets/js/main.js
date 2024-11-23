@@ -129,8 +129,13 @@ closeBtn.addEventListener('click', function () {
 
 navBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
+        const isProject = btn.getAttribute('isProject')
         var code = btn.getAttribute('target')
-        showModal(code);
+        if (isProject == "true") {
+            showModal(code, btn.getAttribute('projectId'))
+        } else {
+            showModal(code);
+        }
     });
 });
 
