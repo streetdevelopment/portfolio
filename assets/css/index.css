@@ -281,3 +281,21 @@ footer h2:hover {
         font-size: 0.75rem;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    footer {
+        padding: 1.5rem 4rem;
+    }
+
+    footer div {
+        padding: 1.5rem 0;
+    }
+
+    footer h2 {
+        font-size: 1.25rem;
+    }
+
+    footer div ul li {
+        font-size: 0.75rem;
+    }
+}
