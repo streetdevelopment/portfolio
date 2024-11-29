@@ -18,8 +18,6 @@ function lightCloseBtn(state) {
     state ? closeBtn.style.fill = '#f5f5f5' : closeBtn.style.fill = '#0B132B'
 }
 
-/*
-
 function showModal(code, project_id = null) {
     modal.style.display = 'block';
     setTimeout(() => {
@@ -120,8 +118,6 @@ function showModal(code, project_id = null) {
     }
 }
 
-*/
-
 closeBtn.addEventListener('click', function () {
     modal.style.left = '-50%';
     modal.style.transform = 'translate(-50%, -50%)';
@@ -144,7 +140,7 @@ navBtns.forEach(function (btn) {
 });
 
 // Modals
-/*
+
 function attachListeners(section) {
     switch (section) {
         case 'about':
@@ -227,7 +223,6 @@ function attachListeners(section) {
     }
 }
 
-*/
 // End of Modals
 
 const svgObject = document.getElementById('streetcity');
@@ -252,7 +247,7 @@ svgObject.addEventListener('load', function () {
         aboutLabel.style.visibility = 'hidden';
     });
     aboutLabel.addEventListener('click', function () {
-        // showModal('about');
+        showModal('about');
     });
 
     const servicesSection = streetCity.getElementById('services-section-container');
@@ -274,7 +269,7 @@ svgObject.addEventListener('load', function () {
         servicesLabel.style.visibility = 'hidden';
     });
     servicesLabel.addEventListener('click', function () {
-        // showModal('services');
+        showModal('services');
     });
 
     const projectsSection = streetCity.getElementById('projects-section-container');
@@ -296,7 +291,7 @@ svgObject.addEventListener('load', function () {
         projectsLabel.style.visibility = 'hidden';
     });
     projectsLabel.addEventListener('click', function () {
-        // showModal('projects');
+        showModal('projects');
     });
 
     const contactsSection = streetCity.getElementById('contacts-section-container');
@@ -318,7 +313,7 @@ svgObject.addEventListener('load', function () {
         contactsLabel.style.visibility = 'hidden';
     });
     contactsLabel.addEventListener('click', function () {
-        // showModal('contacts');
+        showModal('contacts');
     });
 
     const blogsSection = streetCity.getElementById('blogs-section-container');
@@ -340,6 +335,6 @@ svgObject.addEventListener('load', function () {
         blogsLabel.style.visibility = 'hidden';
     });
     blogsLabel.addEventListener('click', function () {
-        // showModal('blogs');
+        showModal('blogs');
     });
 });
