@@ -25,6 +25,17 @@ function showModal(code, project_id = null) {
         modal.style.transform = 'translate(-50%, -50%)';
     }, 10);
     switch (code) {
+        case 'certifications':
+            fetch('modals/certifications.html')
+                .then(response => response.text())
+                .then(html => {
+                    modalContent.innerHTML = html;
+                    modalTop = modal.querySelector('#modal-top');
+                    modalTop.scrollIntoView({ behavior: 'smooth' });
+                    attachListeners(code)
+                })
+                .catch(error => console.error('Error loading HTML:', error));
+            break;
         case 'project_details':
             fetch('modals/project_details.html')
                 .then(response => response.text())

@@ -264,6 +264,38 @@
     overflow: hidden;
 }
 
+.modal .certs-hero {
+    background-color: var(--oxford);
+    color: var(--white);
+    height: fit-content;
+}
+
+.modal .certs-hero h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.modal .certs-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.modal .certs-grid .certs-grid-item {
+    width: 100%;
+    background-color: var(--oxford);
+    padding: 1rem;
+}
+
+.modal .certs-grid .certs-grid-item .certs-grid-item-body {
+    width: 100%;
+}
+
+.modal .certs-grid .certs-grid-item .certs-grid-item-body img {
+    width: 100%;
+}
+
 .modal .projects-hero h2 {
     font-size: 2.5rem;
     margin: 0;
