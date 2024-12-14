@@ -282,6 +282,15 @@
     gap: 1rem;
 }
 
+@media (max-width: 767px) {
+    .modal .certs-hero h2 {
+        font-size: 1.5rem;
+    }
+    .modal .certs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .modal .certs-grid .certs-grid-item {
     width: 100%;
     background-color: var(--oxford);
